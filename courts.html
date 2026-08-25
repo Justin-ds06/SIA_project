@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sports Court Booking — Courts</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
+  <script defer src="js/booking.js"></script>
+  <script defer src="js/timer.js"></script>
+  <script defer src="js/map.js"></script>
+</head>
+<body>
+    
+  <header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">🏟️ Court22</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="courts.html" class="nav-link">Courts</a>
+      <a href="#" class="nav-link">Book Now</a>
+      <a href="reservations.html" class="nav-link">My Reservations</a>
+      <div class="dropdown">
+        <button class="dropbtn">Company ▾</button>
+        <div class="dropdown-content">
+          <a href="about.html">About Us</a>
+          <a href="team.html">Meet the Team</a>
+          <a href="careers.html">Careers</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+  <main class="container">
+<section class="court-map container" aria-label="Court Map">
+  <h1>All Courts</h1>
+
+  <div class="map-toolbar" style="margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+    <div class="filters" style="display:flex;gap:8px;align-items:center">
+
+      <button class="btn outline" id="resetFilter">Reset</button>
+    </div>
+
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn outline" id="toggleAdmin">Enter Layout Mode</button>
+      <button class="btn ghost" id="resetMap">Reset Layout</button>
+    </div>
+  </div>
+
+  <div id="mapWrapper" class="map-wrapper large-map">
+    <!-- SVG floorplan will be injected here by js/map.js -->
+  </div>
+
+  <p class="small" style="margin-top:10px">Click a court to book. Toggle layout mode to reposition courts (admin).</p>
+
+  <div id="courtsGrid" class="grid" style="margin-top:18px"></div>
+</section>
+  </main>
+
+
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> SportsBook — Frontend Prototype</p>
+    </div>
+  </footer>
+</body>
+</html>
