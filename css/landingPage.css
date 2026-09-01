@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fa;
+    color: #222;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 70px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    border-bottom: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background: white;
+    color: #222 !important;
+    border-radius: 5px;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.primary {
+    background: #222;
+    color: white;
+}
+
+.primary:hover {
+    background: #444;
+}
+
+.secondary {
+    border: 1px solid #222;
+    color: #222;
+}
+
+.secondary:hover {
+    background: #222;
+    color: white;
+}
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.about h2,
+.services h2,
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+.services {
+    padding: 80px 8%;
+    text-align: center;
+    background: white;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 280px;
+    padding: 30px 25px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.contact p {
+    color: #666;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #222;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a:not(.login-btn) {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slideshow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: white;
+    color: #222;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-content .btn:hover {
+    background: #ddd;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 75vh;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+}

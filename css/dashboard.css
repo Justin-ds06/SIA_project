@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* Navigation */
+
+header {
+    width: 100%;
+    height: 70px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #bbb;
+}
+
+nav .logout {
+    padding: 9px 18px;
+    background: white;
+    color: #111;
+    border-radius: 5px;
+}
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* Welcome */
+
+.welcome {
+    margin-bottom: 45px;
+}
+
+.welcome h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #777;
+    font-size: 17px;
+}
+
+/* Courts */
+
+.courts h2,
+.bookings h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.court-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.court-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.court-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.court-card img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
+.court-info {
+    padding: 25px;
+}
+
+.court-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.court-info p {
+    color: #777;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.book-btn {
+    display: inline-block;
+    padding: 11px 22px;
+    background: #111;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.book-btn:hover {
+    background: #333;
+}
+
+/* Bookings */
+
+.bookings {
+    margin-top: 60px;
+}
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 25px;
+
+    background: white;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.booking-info h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.booking-info p {
+    color: #777;
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.booking-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #eee;
+    color: #333;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* No Bookings */
+
+.no-bookings {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    color: #777;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a:not(.logout) {
+        display: none;
+    }
+
+    main {
+        width: 90%;
+        padding: 35px 0;
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+    .court-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .booking-price {
+        margin-top: 10px;
+    }
+}
