@@ -33,7 +33,7 @@ session_start();
         <div class="hero-content">
             <h1>COURT 22</h1>
             <p>Step In. Ball Out.</p>
-            <a href="#booking" class="btn">Book Now</a>
+            <a href="index.php" class="btn">Book Now</a>
         </div>
     </div>
     </section>
